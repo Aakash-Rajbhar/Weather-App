@@ -113,6 +113,7 @@ main{
 .error-div h2{
     color: red;
     font-size: 2rem;
+    text-align: center;
 }
 
 .details-div{
