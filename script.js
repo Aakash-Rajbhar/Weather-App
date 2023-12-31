@@ -22,7 +22,7 @@ async function getData(city) {
     const response = await fetch(url + city);
 
     if (response.status == 404) {
-      weatherCondition.style.display = "none";
+      weatherContainer.style.display = "none";
       ErrorDiv.style.display = "flex";
       loader.style.display = "none";
       throw new Error(response.statusText);
