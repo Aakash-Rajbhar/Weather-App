@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;900&family=Mooli&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{    
+    width: 100%;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #5f0f40, #310e68);
+    
+}
+
+.card{
+    min-height: 200px;
+    background: linear-gradient(45deg, rgba(168, 168, 168, 0.2),rgba(255,255,255,0.7));
+    backdrop-filter: blur(3px);
+    border-radius: 30px;
+    padding: 1.5rem;
+    transition: display 1s ease-in;
+}
+
+.search-div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: #fff;
+}
+.search-div input{
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #252525;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 600;
+    padding: 10px 10px 10px 20px;
+    text-align: left;
+    border-radius: 50px;
+    background: transparent;
+    text-transform: uppercase;
+}
+
+.search-div button{
+    cursor: pointer;
+    background-color: #ff6c09;
+    transition: all .2s ease;
+    border: none;
+    float: right;
+    padding: 10px 15px;
+    border-radius: 50px;
+}
+.search-div button:hover{
+    background-color: #ff7e43;
+    transform: scale(1.1);
+}
+
+.search-div button img{
+    width: 30px;
+}
+
+.loader{
+    border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  transition: all 300ms ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-bottom: 10px;
+  display: none;
+  transform: translate(50%, 50%);
+  margin-top: 20px;
+  margin-left: -25px; 
+}
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.error-div{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+.error-div img{
+    width: 250px ;
+}
+
+.error-div h2{
+    color: red;
+    font-size: 2rem;
+}
+
+.details-div{
+    margin-top: 20px;
+    display: none;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+}
+
+.temperature-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: 90%;
+}
+
+.temperature-div img{
+    width: 200px;
+    height: 200px;
+}
+
+.temp-value{
+    font-size: 4rem;
+}
+
+.temp-condition{
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+.location{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-around;
+}
+.location img{
+    width: 30px;
+    height: 30px;
+    margin-left: -5px;
+}
+.location-text{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.other-info-div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px 5px 5px;
+    margin-top: 20px;
+    border-top: 1px solid #464646;
+    border-top-style: groove;
+}
+
+.wind-div, .humidity-div{
+    display: flex;
+    align-items: center;
+}
+
+
+.wind-div img, .humidity-div img{
+    width: 70px;
+    height: 70px;
+}
+
+.wind-div div h3, .humidity-div div h3{
+    font-size: 1.5rem;
+}
+
+
+@media screen and (max-width: 400px){
+    .card{
+        width: 95vw ;
+    }
+    .temperature-div img{
+        width: 150px;
+        height: 150px;
+    }
+    .temp-value{
+        font-size: 3rem;
+    }
+    .location{
+        gap: 5px;
+    }
+    .location img{
+        width: 30px;
+        height: 30px;
+    }
+    .wind-div img, .humidity-div img{
+        width: 60px;
+        height: 60px;
+    }
+    .wind-div div h3, .humidity-div div h3{
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .card{
+        width: 100%;
+    }
+    .location img{
+        margin-left: 0;
+    }
+    .wind-div, .humidity-div{
+        flex-direction: column;
+        align-items: center;
+    }
+    .wind-div div, .humidity-div div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}

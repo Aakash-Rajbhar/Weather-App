@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather - Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="card">
+            <div class="search-div">
+                <input type="text" id="citySearchInput" placeholder="City..."/>
+                <button class="searchBtn"><img src="images/magnifying-glass.svg" alt=""></button>
+            </div>
+            <div class="loader" id="loader"></div>
+            <div class="error-div">
+                <img class="error-img" src="images/error.png" alt="Error! Not Found">
+                <h2>Cannot Find City!!</h2>
+            </div>
+            <div class="details-div">
+                <div class="temperature-div">
+                    <img src="images/weather.png" class="condition-img" width="200" alt="Weather Image">
+                    <h2 class="temp-value">40°C</h2>
+                    <h4 class="temp-condition">Weather Condition</h4>
+                    <div class="location">
+                        <img src="images/location-pin.svg" width="30" height="30" alt="">
+                        <h6 class="location-text">Location</h6>
+                    </div>
+                </div>
+                <div class="other-info-div">
+                    <div class="wind-div">
+                        <img src="images/air.svg" width="30" height="30" alt="">
+                        <div>
+                            <h3 class="wind-speed">4.63 km/h</h3>
+                            <p>Wind Speed</p>
+                        </div>
+                    </div>
+                    <div class="humidity-div">
+                        <img src="images/humidity.svg" width="30" height="30" alt="">
+                        <div>
+                            <h3 class="humidity">51%</h3>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
