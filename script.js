@@ -68,6 +68,9 @@ async function getData(city) {
         case "Smoke":
           conditionImg.src = "images/smoke.png";
           break;
+        case "Haze":
+          conditionImg.src = "images/haze.png";
+          break;
         default:
           conditionImg.src = "";
           break;
