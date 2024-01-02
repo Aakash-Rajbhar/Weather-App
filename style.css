@@ -148,6 +148,7 @@ main {
 .temp-condition {
   font-size: 2rem;
   text-transform: capitalize;
+  text-align: center;
 }
 .location {
   display: flex;

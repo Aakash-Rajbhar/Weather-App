@@ -1,4 +1,3 @@
-// function to fetch the data from api
 const temperature = document.querySelector(".temp-value");
 const Location = document.querySelector(".location-text");
 const weatherCondition = document.querySelector(".temp-condition");
@@ -15,6 +14,8 @@ let city = document.querySelector("#citySearchInput");
 
 const apiKey = "4b0a93d0f932c1d70dd0809be1ab2861";
 const url = `https://api.openweathermap.org/data/2.5/weather?units=metric&appid=601591c56ee4c68c4a9b7a28fac5aa78&q=`;
+
+// function to fetch the data from api
 async function getData(city) {
 
   try {
